@@ -12,8 +12,10 @@ print("------------------- Challenge 1 -------------------")
    # Prompt the user to enter their age.
    # Write conditional statements that print out whether you can drive in your city. 
 
+age = input("Enter your age: ")
 
-
+while age == int:
+    age = input("Enter your age: ")
 
 
 

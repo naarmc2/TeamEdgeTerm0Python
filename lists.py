@@ -28,14 +28,16 @@ names = ["Julian", "Wolf", "Alex", "Steph", "Alessandro"]
 print("names: " + str(names))  
 
 #-->TODO: Declare another list called friends with at least 5 strings inside (if you don't have 5 friends make them up!)
-
+friends = ["Alexa", "Nathania","Nathania", "Jim", "John"]
+print("friends: " + str(friends))  
 
 #this list holds numbers
 numbers = [12.9, 23.4 , 100, 3.1415 , 500, 1.20]
 print("numbers: " + str(numbers)) 
 
 #-->TODO: Declare another list and add in at least 5 numbers. Why five? I don't know. It just feels right.
-
+numberLst2 = [12, 1, 2, 5, 6]
+print("numbers: " + str(numberLst2)) 
 
 
 #this list has mixed data types. It's allowed in Python!
@@ -43,7 +45,7 @@ random_stuff = ["Aardvark", True, False, 1.23, "Grandpa"]
 print("random: " + str(random_stuff))
 
 #-->TODO: Declare and log a list filled with the first 5 things that come into your head, booleans, Strings, numbers are all cool,
-
+random_stuff2 = ["A", 2, 5.0, "Hi", 'bye']
 
 #-->TODO: Declare and log two more lists with whatever you want. 
 

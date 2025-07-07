@@ -1,5 +1,7 @@
 import random
+name = input("What is your name? ")
 
+print(name)
 # -------------------------------------------- 
 
 	# You've just learned about variables, conditionals.
