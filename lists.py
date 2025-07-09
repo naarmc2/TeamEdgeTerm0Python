@@ -78,7 +78,8 @@ numbers[0] = times_ten(numbers[0])
 print(numbers)
 
 #-->TODO: Write another function that multiplies a number by 1000 and print the list, as above 
-
+def times_1000(number):
+    pass
 
 
 #-->TODO: Replace your random list elements with anything you want, using the index. 

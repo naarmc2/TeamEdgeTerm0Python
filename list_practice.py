@@ -15,3 +15,12 @@ cars.append('Rolls Royce')
 print(cars)
 cars[3] ='Subaru'
 #print(cars.clear())
+
+message = 'he1Lo w0rld'
+
+message = message.title().replace('1', 'l').replace('0','o')
+print(message)
+
+greeting = 'Hello!'
+greeting = greeting[0:len(greeting)-1]
+print(greeting)
