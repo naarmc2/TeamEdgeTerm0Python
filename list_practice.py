@@ -9,3 +9,9 @@ print(x)
 cars = ["Honda", "Toyota", "BMW", "Ferrari", "Nissan", "Buggati"]
 
 print(cars)
+
+cars.remove('Buggati')
+cars.append('Rolls Royce')
+print(cars)
+cars[3] ='Subaru'
+#print(cars.clear())
