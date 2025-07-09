@@ -32,48 +32,57 @@ print("Welcome to 8 Ball. Ask a question and vigoriously shake the ball \n Then 
 
 question = input("What is your question? ")
 
-ballNumber = random.randint(0,19)
+def manual(ballNumber):
+	if ballNumber == 0:
+		print("It is certain.")
+	if ballNumber == 1:
+		print("It is decidedly so")
+	elif ballNumber == 2:
+		print("Without a doubt")
+	elif ballNumber == 3:
+		print("Yes - definitely.")
+	elif ballNumber == 4:
+		print("You may rely on it.")
+	elif ballNumber == 5:
+		print(" As I see it, yes.")
+	elif ballNumber == 6:
+		print("Most likely.")
+	elif ballNumber == 7:
+		print("Outlook good.")
+	elif ballNumber == 8:
+		print("Yes")
+	elif ballNumber == 9:
+		print("Signs point to yes.")
+	elif ballNumber == 10:
+		print(" Reply hazy, try again.")
+	elif ballNumber == 11:
+		print(" Ask again later.")
+	elif ballNumber == 12:
+		print(" Better not tell you now.")
+	elif ballNumber == 13:
+		print(" Cannot predict now.")
+	elif ballNumber == 14:
+		print(" Concentrate and ask again.")
+	elif ballNumber == 15:
+		print(" Don't count on it.")
+	elif ballNumber == 16:
+		print("My reply is no.")
+	elif ballNumber == 17:
+		print("My sources say no")
+	elif ballNumber == 18:
+		print(" Outlook not so good.")
+	else:
+		print("Very doubtful.")
 
-if ballNumber == 0:
-    print("It is certain.")
-if ballNumber == 1:
-    print("It is decidedly so")
-elif ballNumber == 2:
-    print("Without a doubt")
-elif ballNumber == 3:
-    print("Yes - definitely.")
-elif ballNumber == 4:
-    print("You may rely on it.")
-elif ballNumber == 5:
-    print(" As I see it, yes.")
-elif ballNumber == 6:
-    print("Most likely.")
-elif ballNumber == 7:
-    print("Outlook good.")
-elif ballNumber == 8:
-    print("Yes")
-elif ballNumber == 9:
-    print("Signs point to yes.")
-elif ballNumber == 10:
-    print(" Reply hazy, try again.")
-elif ballNumber == 11:
-    print(" Ask again later.")
-elif ballNumber == 12:
-    print(" Better not tell you now.")
-elif ballNumber == 13:
-    print(" Cannot predict now.")
-elif ballNumber == 14:
-    print(" Concentrate and ask again.")
-elif ballNumber == 15:
-    print(" Don't count on it.")
-elif ballNumber == 16:
-    print("My reply is no.")
-elif ballNumber == 17:
-    print("My sources say no")
-elif ballNumber == 18:
-    print(" Outlook not so good.")
-elif ballNumber == 19:
-    print("Very doubtful.")
+def lst_8_ball(ballNumber):
+	lstOfResponses = [" It is certain.","It is decidedly so.","Without a doubt.","Yes - definitely."]
+	print(lstOfResponses[ballNumber])
+
+def main():
+	ballNumber = random.randint(0,3)
+	lst_8_ball(ballNumber)
+
+main()
 
 # -------------------------------------------- 
 
@@ -113,6 +122,7 @@ elif ballNumber == 19:
 	# Select your own theme and use case and modify your code!
 	
 # -------------------------------------------- 
+#paper fortune teller
 
 
 

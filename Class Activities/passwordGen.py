@@ -4,7 +4,7 @@ import random
 lowercase_letters = "abcdefghijklmnopqrstuvwx"
 uppercase_letters = lowercase_letters.upper()
 digits = "1234567890"
-symbols = "!$?@#%^&*()_+-=ƒ∂ßåœ∑´®®†¥¨ˆøπ¬˚∆˙˙©∂ßßå≈ç√∫˜µ"
+symbols = "!$?@#%^&*()_+-=ƒ∂ßåœ∑´®®†¥¨ˆøπ¬˚∆˙˙©∂ßßå≈ç√∫˜µ "
 
 # Combine all character sets
 all_chars = lowercase_letters + uppercase_letters + digits + symbols
