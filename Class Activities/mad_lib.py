@@ -11,7 +11,7 @@ def mad_lib():
 
 
 
-    print(f"It was a {type_of_day} day on the West Coast. Many people were out and about on the {place}.\n {person} had went out to buy a {item}. They received a call from {caller} telling them that their \n pet {pet_type} {pet_name} was missing \n '{exclaim}' he/she exclaimed. Then using their {magical_item} they teleported back home.")
+    print(f"It was a {type_of_day} day on the West Coast. Many people were out and about on the {place}.\n {person} had went out to buy a {item}. They received a call from {caller} telling them that their \n pet {pet_type} {pet_name} was missing \n '{exclaim}' he/she exclaimed. Then using their {magical_item} \n they teleported back home.")
 
 
 def main():

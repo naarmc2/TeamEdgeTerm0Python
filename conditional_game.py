@@ -1,7 +1,4 @@
 import random
-name = input("What is your name? ")
-
-print(name)
 # -------------------------------------------- 
 
 	# You've just learned about variables, conditionals.
@@ -28,24 +25,55 @@ print(name)
 	# Part 1: 
 	# Print instructions on the screen and 
 	# prompt the user to ask a question
-
-	
-
   # --------------------------------------------
 
 
+print("Welcome to 8 Ball. Ask a question and vigoriously shake the ball \n Then the ball will respond with one of twenty responses, chosen at random. ")
 
+question = input("What is your question? ")
 
+ballNumber = random.randint(0,19)
 
-
-
-
-
-
-
-
-
-
+if ballNumber == 0:
+    print("It is certain.")
+if ballNumber == 1:
+    print("It is decidedly so")
+elif ballNumber == 2:
+    print("Without a doubt")
+elif ballNumber == 3:
+    print("Yes - definitely.")
+elif ballNumber == 4:
+    print("You may rely on it.")
+elif ballNumber == 5:
+    print(" As I see it, yes.")
+elif ballNumber == 6:
+    print("Most likely.")
+elif ballNumber == 7:
+    print("Outlook good.")
+elif ballNumber == 8:
+    print("Yes")
+elif ballNumber == 9:
+    print("Signs point to yes.")
+elif ballNumber == 10:
+    print(" Reply hazy, try again.")
+elif ballNumber == 11:
+    print(" Ask again later.")
+elif ballNumber == 12:
+    print(" Better not tell you now.")
+elif ballNumber == 13:
+    print(" Cannot predict now.")
+elif ballNumber == 14:
+    print(" Concentrate and ask again.")
+elif ballNumber == 15:
+    print(" Don't count on it.")
+elif ballNumber == 16:
+    print("My reply is no.")
+elif ballNumber == 17:
+    print("My sources say no")
+elif ballNumber == 18:
+    print(" Outlook not so good.")
+elif ballNumber == 19:
+    print("Very doubtful.")
 
 # -------------------------------------------- 
 
@@ -77,25 +105,6 @@ print(name)
 	# Look up random.rand_int to see how you can use it to select a random number.
 
   # -------------------------------------------- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # -------------------------------------------- 
 

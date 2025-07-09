@@ -1,4 +1,5 @@
 
+import random
 # -------------------------------------------- 
 # Day 2 Challenges
 # -------------------------------------------- 
@@ -10,16 +11,26 @@ print(message)
 print("------------------- Challenge 1 -------------------")
 # Can you drive?
    # Prompt the user to enter their age.
-   # Write conditional statements that print out whether you can drive in your city. 
-
-age = input("Enter your age: ")
-
-while age == int:
-    age = input("Enter your age: ")
+   # Write condi12tional statements that print out whether you can drive in your city. 
 
 
 
+def canYouDrive(age):
+   while not age.isdigit():
+      age = input("Enter your age: ")
+   age = int(age)
+   if age < 16:
+      print("You can't drive! Underage")
+   elif 16 <= age <= 60:
+      print("You can drive")
+   else:
+      print("You can't drive. Too old")
 
+def main():
+   age = (input("Enter your age: "))
+   (canYouDrive(age))
+
+#main()
 
 
 
@@ -35,14 +46,25 @@ print("------------------- Challenge 2 -------------------")
    # Hint: Create three variables and assign them random scores. 
 
 
+score1 =  random.randint(1, 100)
+score2 =  random.randint(1, 100)
+score3 =  random.randint(1, 100)
 
+def highestScore(score1, score2, score3):
+   print( score1, score2, score3)
+   if score1 > score2:
+      if score1 > score3:
+         return (f"Highest is score1: {score1}")
+   elif score2 > score1:
+      if score2 > score3:
+         return (f"Highest is score2: {score2}")
+   elif score3 > score1:
+      if score3 > score2:
+         return (f"Highest is score3: {score3}")
+   else:
+      return ("All or some values are the same" + str(max([score1, score2, score3])) )
 
-
-
-
-
-
-
+print(highestScore(score1,score2,score3))
 
 # -------------------------------------------- 
 
@@ -63,15 +85,14 @@ print("------------------- Challenge 3 -------------------")
 # Here's a variable to get you started:
 weather = "rainy"
 
-
-
-
-
-
-
-
-
-
+if weather == "rainy":
+   print("Bring an umbrella")
+elif weather == "sunny":
+   print("Wear a hat and sunglasses")
+elif weather == "snowing":
+   print("Wear gloves and a scarf")
+else:
+   print("Idk what to tell you man")
 
 
 
@@ -89,12 +110,14 @@ weather = "rainy"
    # Hint: You will need another variable to keep track of the temperature.
 
 
+temperature = random.randint(0, 125)
 
-
-
-
-
-
+if 30 < temperature <= 60 and weather == "rainy":
+   print("Bring umbrella & wear a light jacket")
+elif temperature <= 30 and weather == "rainy":
+   print("Bring umbrella & a warmer jacket")
+else:
+   print("Wear light clothing. it's hot")
 
 
 
@@ -109,13 +132,13 @@ print("------------------- Challenge 4 -------------------")
 # Make sure to add a statement that accounts for any numbers out of range! 
 
 
+dayOfWeek = input("What day is it? ")
 
+number = input("Enter a number from 1-7, inclusive: ")
+while number not in "1234567":
+   number = input("Enter a number from 1-7, inclusive: ")
 
-
-
-
-
-
+print(f"Today is {dayOfWeek} the {number}th")
 
 
 # -------------------------------------------- 
@@ -137,6 +160,13 @@ print("------------------- Challenge 5 -------------------")
 
 
 
+year = int(input("Enter the year: "))
 
+if year%4 == 0:
+   if year%100 == 0:
+      if year%400 == 0:
+         print("It's a leap year")
+else:
+   print("year is not a leap year")
 
 
