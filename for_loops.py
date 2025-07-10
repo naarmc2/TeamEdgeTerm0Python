@@ -25,6 +25,10 @@ for x in range(11):
    
 
 #-->TODO: Write a loop that prints a happy birthday message for every year you have been alive.
+age = 17
+for i in range(age):
+    print("happy bdy")
+
 
 
 
