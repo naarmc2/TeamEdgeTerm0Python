@@ -95,9 +95,25 @@ def divide_numbers(num1, num2):
 
 # -------------------------------------------- 
 
+def userInput():
+    num1 = int(input("Enter a number: "))
+    num2 = int(input("Enter a number: "))
+    operation = input("Enter an operation:")
 
+    done = True 
+    while done == True:
+        operation = input("Enter an operation again:")
+        if operation in ["multiply", "divide", "subtract", "add", "exponent"]:
+            done = False
 
-
+    if operation == "multiply":
+        return num1 * num2
+    elif operation == "divide":
+        return num1/num2
+    elif operation == "subtract":
+        return num1-num2
+    elif operation == "add":
+        return num1+num2
 
 
 

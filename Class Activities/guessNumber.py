@@ -6,7 +6,7 @@ def generateRandomNumber(maximumValue):
 
 def guessNumber(maximumValue):
     actualNumber = generateRandomNumber(maximumValue)
-    print(f"The actual number is {actualNumber}")
+    #print(f"The actual number is {actualNumber}")
     #count = 0
     guess =int(input(f"Enter a number from 1-{maximumValue}: "))
    
