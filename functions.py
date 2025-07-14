@@ -94,7 +94,6 @@ def sum_double(sum1, sum2):
 
 print(sum_double(5,4))
 
-
 # Make sure to test your code! Write a few function calls to make sure your code works!
 
 # -------------------------------------------- 
@@ -110,17 +109,19 @@ print(sum_double(5,4))
 
 # -------------------------------------------- 
 
+def makesTen(num1, num2):
+	if num1 == 10 or num2==10:
+		return True
+	elif num1+num2 == 10:
+		return True
+	else:
+		return False
 
-
-
-
+#print(makesTen(10, 1))
 
 # Make sure to test your code! Write a few function calls to make sure your code works!
-
 # -------------------------------------------- 
-
 # **** Challenge 2: Problem 3 ****
-
 # Write a function that will return the time our alarm is set to go off.
 
 # Given a day of the week encoded as 0=Sun, 1=Mon, 2=Tue, ...6=Sat, and a boolean

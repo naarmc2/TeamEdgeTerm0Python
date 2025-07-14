@@ -17,10 +17,10 @@ def guessNumber(maximumValue):
         else:
             print('Your guess is out of range')
         guess =int(input(f"Enter a number from 1-{maximumValue}: "))
-    print('Congrats!')
+    print('Congrats! You got it right')
 
 def main():
-    maximumValue = 10
+    maximumValue = 100
     guessNumber(maximumValue)
 
 main()

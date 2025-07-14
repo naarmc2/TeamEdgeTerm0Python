@@ -63,15 +63,12 @@ def sub_numbers(num1, num2):
 # -------------------------------------------- 
 
 # Write a function called multiply_numbers that will take two numbers and return the product.
-
-
-
-
-
+def multiply_numbers(num1, num2):
+     return num1 * num2
 
 # Write a function called divide_numbers that will take two numbers and return the quotient.
-
-
+def divide_numbers(num1, num2):
+     return num1/ num2
 
 
 
@@ -97,17 +94,6 @@ def sub_numbers(num1, num2):
 # Write a function that will prompt the user for the operation they want to call and the values they are inputting.
 
 # -------------------------------------------- 
-
-
-
-
-
-
-
-
-
-
-
 
 
 
