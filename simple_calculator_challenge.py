@@ -95,7 +95,7 @@ def divide_numbers(num1, num2):
 
 # -------------------------------------------- 
 
-def userInput():
+def calculator():
     num1 = int(input("Enter a number: "))
     num2 = int(input("Enter a number: "))
     operation = input("Enter an operation:")
@@ -139,8 +139,13 @@ def userInput():
   
 # -------------------------------------------- 
 
+def calculateDaysOfLife(age):
+    leapYears = age//4 
+    nonLeapYears = age - leapYears
+        
+    return (f"You will have lived for {(leapYears*366)+(nonLeapYears*365)} when the year is completed!")
 
-
+calculateDaysOfLife(17)
 
 
 
