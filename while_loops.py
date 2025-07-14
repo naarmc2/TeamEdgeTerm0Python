@@ -125,12 +125,15 @@ print("------------------- CHALLENGE 4 : MATH QUIZ   -------------------")
 def guessNumber():
     is_correct = False
     guess =int(input("Enter a number from 1-10: "))
-    actualNumber = random.randint(1,10)
-    print(actualNumber)
+    num1 = random.randint(1,10)
+    num2 = random.randint(1,10)
+
+    actualSum = num1 + num2
+    print(actualSum)
     
     while is_correct != True:
-        guess =int(input("Enter a number from 1-10: "))
-        if guess == actualNumber:
+        guess =int(input("Enter a number that is a sum of numbers in the range of 1-10 : "))
+        if guess == actualSum:
            is_correct = True
     print('Congrats!')
 
@@ -145,13 +148,18 @@ print("------------------- CHALLENGE 5 : WHAT AM I?   -------------------")
 keep_asking = False
 
 def prompt_user():
-    user = input("Enter a word: ")
+    userWord = input("Enter a word: ")
+    return userWord
 
 def response(response):
-    print(f"I know you are a {response}, but what am I?")
+    return (f"I know you are a {response}, but what am I?")
 
-while not keep_asking:
-    response(prompt_user())
+while keep_asking != True:
+    a= prompt_user()
+    response(a)
+    if a == 'orange':
+       keep_asking = True
+      
 
 #-->TODO: Challenge! write a secret word to break out of the loop!
 

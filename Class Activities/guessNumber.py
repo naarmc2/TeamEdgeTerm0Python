@@ -1,15 +1,28 @@
 import random
 
-guess =int(input("Enter a number from 1-10: "))
-actualNumber = random.randint(1,10)
-print(actualNumber)
+def generateRandomNumber(maximumValue):
+    actualNumber = random.randint(1, maximumValue)
+    return actualNumber
 
-def guessNumber(guess):
+def guessNumber(maximumValue):
+    actualNumber = generateRandomNumber(maximumValue)
+    print(f"The actual number is {actualNumber}")
+    #count = 0
+    guess =int(input(f"Enter a number from 1-{maximumValue}: "))
+   
     while guess != actualNumber:
-        guess =int(input("Enter a number from 1-10: "))
+        #count +=1
+        if 1 <= guess <= maximumValue:
+            print("Your guess is wrong but within range")
+        else:
+            print('Your guess is out of range')
+        guess =int(input(f"Enter a number from 1-{maximumValue}: "))
     print('Congrats!')
 
 def main():
-    guessNumber(guess)
+    maximumValue = 10
+    guessNumber(maximumValue)
 
 main()
+
+

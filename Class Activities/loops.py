@@ -37,12 +37,30 @@ list = ['🍇', 3, 2, 1, '🍎', 3 ,2, 1, '🍌' , 3, 2, 1]
 #for item in list:
 #   print(item)
 
-for i in range(101):
-    if i%5 == 0 and i%3 == 0:
-        print("FizzBuzz")
-    elif i%3 == 0:
-        print("Fizz")
-    elif i%5 == 0:
-        print("Buzz")
-    else:
-        print(i)
+# for i in range(101):
+#     if i%5 == 0 and i%3 == 0:
+#         print("FizzBuzz")
+#     elif i%3 == 0:
+#         print("Fizz")
+#     elif i%5 == 0:
+#         print("Buzz")
+#     else:
+#         print(i)
+
+Done = False
+i = 0
+fruits = ["apple","banana","cherry"]
+while Done != True:
+    print(fruits[i])
+    i+=1
+    if len(fruits) == i:
+        Done = True
+
+# lst = ['1']
+# i = 1
+# while i < 5:
+#     i += 1
+#     print(lst[i])
+#     lst.append(str(lst[i-1]+str(i)))
+    
+

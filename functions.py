@@ -19,30 +19,52 @@ print("------------------- Challenge 1 -------------------")
 
 # **** Challenge 1: Problem 1 ****
 # Write a function called print_message() that prints any message you want.
-
+def print_message():
+    print("Helloo World")
 
 # **** Challenge 1: Problem 2 ****
 # Write a function called print_five_messages() that calls print_message() five times.
+def print_five_messages():
+    for i in range(5):
+    	print_message()
 
+print_five_messages()
 
 # **** Challenge 1: Problem 3 ****
 # Write a function called get_user_input() that asks the user if they'd like to print your message
-# once or five times. Then call one of the two functions above based on what the user decides.
+# once or five times. Then call one of the two functions above based on what the user decides.\
 
+#userInput = input("enter a one or a five: ")
+
+def get_user_input(oneOrFive):
+	if ((oneOrFive != '5') or (oneOrFive != '1')):     
+		oneOrFive = input("enter a one or a five PLEASE: ")    #asks one more time
+	elif int(oneOrFive) == 1:
+		print_message()
+	else:
+		print_five_messages()
+    
+#get_user_input(userInput)
 
 # **** Challenge 1: Problem 4 ****
 # Write a function called print_greeting() that prints a greeting message to the user.
-
+def print_greeting():
+	print('Greetings User')
 
 # **** Challenge 1: Problem 5 ****
 # Write a function called print_closing() that prints a goodbye message to the user.
-
+def print_closing():
+	print('Till Next Time User')
 
 # **** Challenge 1: Problem 6 ****
 # Write a function called run() that greets the user, asks them for input, and sends a goodbye message.
 # Remember! Use the functions that you've already made. Don't hardcode anything!
+def run():
+	print_greeting()
+	userInput = input('Tell me anything: ')
+	print_closing()
 
-
+#run()
 
 # -------------------------------------------- 
 
@@ -64,11 +86,13 @@ print("------------------- Challenge 2 -------------------")
 		# sum_double(2, 2) → 8
 
 # -------------------------------------------- 
+def sum_double(sum1, sum2):
+	if sum1 == sum2:
+		return sum1*4
+	else:
+		return sum1+sum2
 
-
-
-
-
+print(sum_double(5,4))
 
 
 # Make sure to test your code! Write a few function calls to make sure your code works!
