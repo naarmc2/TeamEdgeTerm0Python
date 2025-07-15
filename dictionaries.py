@@ -65,13 +65,12 @@ print("------------------- CHALLENGE 3 : MEHTODS   -------------------")
 
 #-->TODO: Make a method that will update your dictionary value. It should take in a dictionary and return it modified.
 def updateDict(dict):
-    print(dict.keys())
+    keys = list(dict.keys())
+    dict[keys[0]] = 'bye'
+    return dict 
 
-
-updateDict(aDictionary)
 #-->TODO: Call the method.
-
-
+print(updateDict(aDictionary))
 
 print("------------------- CHALLENGE 4 : LITERALLY   -------------------")
 
