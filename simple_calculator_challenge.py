@@ -29,7 +29,7 @@ print("My Simple Calculator")
 
 # Write a function called add_numbers that will take two numbers and return the sum.
 
-def addNumbers(num1, num2):
+def add_numbers(num1, num2):
      return num1 + num2
 
 # Write a function called sub_numbers that will take two numbers and return the difference.
@@ -70,9 +70,6 @@ def multiply_numbers(num1, num2):
 def divide_numbers(num1, num2):
      return num1/ num2
 
-
-
-
 # ------------
 # Testing Code - Uncomment the code below to test your code!
 
@@ -98,24 +95,26 @@ def divide_numbers(num1, num2):
 def calculator():
     num1 = int(input("Enter a number: "))
     num2 = int(input("Enter a number: "))
-    operation = input("Enter an operation:")
 
     done = True 
     while done == True:
-        operation = input("Enter an operation again:")
-        if operation in ["multiply", "divide", "subtract", "add", "exponent"]:
+        operation = input("Enter an operation:").strip()
+        if operation in ["multiply", "divide", "subtract", "add", "exponent", "-", "+","/", "*"]:
             done = False
 
-    if operation == "multiply":
-        return num1 * num2
-    elif operation == "divide":
-        return num1/num2
-    elif operation == "subtract":
-        return num1-num2
-    elif operation == "add":
-        return num1+num2
+    if operation == "multiply" or operation == "*":
+        return multiply_numbers(num1,num2)
+    elif operation == "divide"or operation == "/":
+        return divide_numbers(num1,num2)
+    elif operation == "subtract" or operation == "-":
+        return sub_numbers(num1,num2)
+    elif operation == "add" or operation == "+":
+        return add_numbers(num1,num2)
+    elif operation == "exponent":
+        return num1**num2
+    
 
-
+print(calculator())
 
 # -------------------------------------------- 
 
@@ -143,11 +142,23 @@ def calculateDaysOfLife(age):
     leapYears = age//4 
     nonLeapYears = age - leapYears
         
-    return (f"You will have lived for {(leapYears*366)+(nonLeapYears*365)} when the year is completed!")
+    return (f"You will have lived for {(leapYears*366)+(nonLeapYears*365)} days when the year is completed!")
 
-calculateDaysOfLife(17)
+#print(calculateDaysOfLife(17))
 
-
+def daysInAMonth(month, year):
+    if month == "February":
+        if (year%4) != 0:
+            return 28
+        else:
+            return 29
+    elif month in ["September","April","June", "November"]:
+        return 30
+    else:
+        return 31
+        
+        
+#print(daysInAMonth('March', 2001))
 
 
 
