@@ -22,6 +22,7 @@ print("------------------- CHALLENGE 1 : DEFINE    -------------------")
 #-->TODO: Add at least 3 comments to the dictionary below to demonstrate you understand its usage
 
 dictionary = {
+    #key: value
     "name": "box",
     "is_empty": True
 }
@@ -34,38 +35,40 @@ dictionary["contents"].append("thing 4")
 print(f"{dictionary['name']} has {dictionary['contents']}")
 print(dictionary)
 
- 
-
 #-->TODO: Declare a new dictionary and set at least 4 properties to it including: string, boolean, number, list
 
 ##################################  MY dictionary ########################### #/
-
-
-
-
-
+aDictionary = {
+            "string": "hi",
+            "boolean": True,
+            "integer": 5,
+            "list": ["man", "mango"]
+}
 
 ########################################################################## #/
-
 
 
 print("------------------- CHALLENGE 2 : MODIFY   -------------------")
 
 #-->TODO: Print your dictionary you created above
-
+print(aDictionary)
 
 #-->TODO: Update the dictionary you just created  by adding new properties and values, including list elements, in this section.
-
+aDictionary["string"]  = "hi again"
+aDictionary["boolean"] = False
 
 #-->TODO: Print your dictionary again and observe changes
-
+print(aDictionary)
 
 print("------------------- CHALLENGE 3 : MEHTODS   -------------------")
 
 
 #-->TODO: Make a method that will update your dictionary value. It should take in a dictionary and return it modified.
+def updateDict(dict):
+    print(dict.keys())
 
 
+updateDict(aDictionary)
 #-->TODO: Call the method.
 
 
