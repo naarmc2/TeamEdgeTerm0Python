@@ -23,7 +23,7 @@
 	# Don't forget the tax and tip!
 
 # After this program finishes running, it should output a receipt with:
-        #1. the items you ordered and their cost 
+    #1. the items you ordered and their cost 
 	#2. a total for your order before tax
 	#3. a total for your order after tax
 	#4. the amount of your tip 
@@ -41,8 +41,27 @@
 # Remember: Your user should be able to order at least 3 items (a drink, meal, and dessert item). 
 
 # --------------------------------------------
+menu = {
+    "drink":{"cocaCola": 5, "water": 3, "orange juice": 7, "none": 0},
+    "meal":{"chicken tenders": 15, "pizza": 14, "hot dog": 12, "none": 0},
+    "dessert":{"cookie": 5, "brownie": 4, "none": 0},
+}
+
+userDrinkOrder = input("What drink do you want? If none, enter 'none': ")
+userMealOrder = input("What meal do you want? If none, enter none:  ")
+userDessertOrder = input("What dessert do you want? If none, enter none: ")
 
 
+drinkCost = menu['drink'][userDrinkOrder]
+mealCost = menu['meal'][userMealOrder]
+dessertCost = menu['dessert'][userDessertOrder]
+
+#print(drinkCost, mealCost, dessertCost)
+tax = 1.08
+cost = (drinkCost + mealCost + dessertCost) * tax
+tip = int(input("How much do you want to tip? "))
+if tip > 0:
+    cost = cost * tip
 
 # -------------------------------------------- 
 
@@ -54,7 +73,7 @@
 
 # --------------------------------------------
 
-
+print(menu)
 
 
 
