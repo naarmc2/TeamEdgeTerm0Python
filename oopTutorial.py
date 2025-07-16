@@ -1,29 +1,28 @@
 class BankAccount:
-    def __init__(self, bankName, users, pins):
+    def __init__(self, bankName, balance, users, pins):
         self.bankName = bankName
         self.users= users
+        self.balance = balance
         self.pins = pins
 
-
 class ATM:
-    def __init__(self ,user, balance, pin):
-        self.user
+    def __init__(self ,user, pin):
+        self.user = user
         self.exit = False
         self.pin = pin
-        self.balance = balance
         
     def checkBalance(self, pin):
-        if pin  == self.pin:
+        if pin == self.pin:
             return (f"${self.balance}")
         else:
             print("Wrong pin. Try again: ")
-    def depositMoney(self, money):
-        self.balance += money
-        print(f"You deposited ${money}. You now have ${self.balance}")
+    def depositMoney(other, money):
+        other.balance += money
+        print(f"You deposited ${money}. You now have ${other.balance}")
         
-    def withdraw(self, money):
-        self.balance -= money
-        print(f"You withdraw ${money}. You now have ${self.balance}")
+    def withdraw(other, money):
+        other.balance -= money
+        print(f"You withdraw ${money}. You now have ${other.balance}")
         
     def exitScreen(self, response):
         if response == "exit":
@@ -31,15 +30,23 @@ class ATM:
 
 def main():
     users =["Tim", "Jac", "Natty"]
-    usersPin = {}
-    for user in users:
-        usersPin[user] = input("Commit to a four number sequence: ")
+    pins = []
+    usersPinAndBalances = {}
+    for i in range(len(users)):
+        pins.append(input(f"Commit to a four number sequence {users[i]}: "))
         
-    print(usersPin)
+    print(pins)
+    balances=[100, 1600, 532]
+    for user in users:
+        i = 0
+        usersPinAndBalances[user] = (usersPinAndBalances[user], balances[i] )
+        print((usersPinAndBalances[user], balances[i] ))
+        i +=1
+    print(usersPinAndBalances[user], balances[i] )
     
-    TDBank = BankAccount("TDBank", users, usersPin)
+    TDBank = BankAccount("TDBank", users, usersPinAndBalances)
     
-    #WalgreensATM = ATM("Natty" ,1000, )
+    WalgreensATM = ATM("Natty", usersPinAndBalances["Natty"] )
     #WalgreensATM.depositMoney(4000)
     #print(User1.checkBalance(user1Pin))
     
