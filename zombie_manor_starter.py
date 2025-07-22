@@ -22,21 +22,21 @@ class Player:
 #**********INSTANTIATE OBJECTS ***************
 player = Player()
 
-kitchen = Room()
-kitchen.name = "Kitchen"
-kitchen.description = "The kitchen is a really nice one! It has all the stuff you need to cook a healthy meal...of zombie parts! on the table there is a red pill."
-kitchen.objects =["potion", "sandwich", "knife"]
-kitchen.paths=["Living Room" , "Bathroom" , "Backyard" ]
+bedroom = Room()
+bedroom.name = "Bedroom"
+bedroom.description = "You wake up feeling groggy. Where are you? A scan of the room reveals a lack of personal identifiers. Unease sets in and further intensifies when uyou hear the sound of a plane flying by... followed by an explosion"
+bedroom.objects =["scattered pills", "window", "note", "cloak"]
+bedroom.paths=["Hall Room", "Window"]
 
-bathroom = Room() 
-bathroom.name= "Bathroom"
-bathroom.description ="You are in a Bathroom. Everything is a mess. There is blood on the floor. The shower is still on... "
-bathroom.objects = ["towel" , "toothbrush", "toilet Paper", "soap"]
-bathroom.paths =["Kitchen"]
+hall = Room() 
+hall.name= "Hall"
+hall.description ="You made it into the Hall. There are servants bustling about"
+hall.objects = ["minature aviator model" , "switch", "", "soap"]
+hall.paths =["Dugeon", "Outside", "Golden Door"]
 
 #add the rooms to the rooms list
-rooms.append(kitchen)
-rooms.append(bathroom)
+rooms.append(bedroom)
+rooms.append(hall)
 
 
 def prompt_user():

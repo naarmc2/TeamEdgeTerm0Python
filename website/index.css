@@ -1,0 +1,30 @@
+html{
+  border-style: solid;
+  border-color: red;
+}
+
+body{
+  margin: 60px;
+}
+
+h1 {
+  color: yellow;
+  font-size: 40px;
+  font-family: Times New Roman;
+  text-align: center;
+}
+
+h2 {
+  color: purple;
+  font-size: 15px; 
+}
+
+h3 {
+  color: blue;
+  font-style: italic;
+}
+
+p {
+  color: orange;
+  font-size: 25px; 
+}
