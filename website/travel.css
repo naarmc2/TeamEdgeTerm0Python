@@ -1,0 +1,20 @@
+.activity-grid{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 15px;
+    background: lightgreen;
+}
+
+.activity-card{
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    flex:1; 
+    justify-content: center;
+    padding: 10px;
+    border: solid;
+}
+
+
+

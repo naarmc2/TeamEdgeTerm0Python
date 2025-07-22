@@ -1,6 +1,6 @@
 html{
-  border-style: solid;
-  border-color: red;
+  border-style: dotted;
+  border-color: black;
 }
 
 body{
@@ -14,17 +14,21 @@ h1 {
   text-align: center;
 }
 
+h1 a{
+    color: purple;
+}
+
 h2 {
-  color: purple;
-  font-size: 15px; 
+  color: blue;
+  font-size: 25px; 
 }
 
 h3 {
-  color: blue;
+  color: green;
   font-style: italic;
 }
 
 p {
-  color: orange;
+  color: black;
   font-size: 25px; 
 }
