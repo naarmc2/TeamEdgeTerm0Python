@@ -22,26 +22,52 @@ print(welcome_message)
 
 
 #-->Todo: declare a shopping_list list
-
+shoppingList = []
 
 def prompt_user():
+
 
     reply = input("What do you want to add or remove?  >>  ")
 
     return reply
 
+
 def check_answer(ans):
-    pass
+    splitAns = ans.split(" ",  1)
+    return splitAns
 
-
-def add_item():
+def add_item(item):
 #this function can take in a string and store it in an array
-    pass
+    shoppingList.append(item)
 
 
-def remove_item():
-    pass
+def remove_item(item):
+    if item in shopping_list:
+        shoppingList.remove(item)
+    else:
+        print("That was never in the list. ")
+
+
+check_answer("remove milk")
 
 while active:
+    ans = check_answer(prompt_user())
+    doneWriting = input("Are you done writing your list? (T/F) ") 
+    if doneWriting == "T":
+        active = False
+    else:
+        check_answer(prompt_user()) #this makes the program continously prompt and check response while the boolean 'active' returns True
 
-    check_answer(prompt_user()) #this makes the program continously prompt and check response while the boolean 'active' returns True
+    action = ans[0]
+    item = ans[1]
+
+    if action == "remove":
+        remove_item(item)
+        print(shoppingList)
+
+    elif action == "add":
+        add_item(item)
+        print(shoppingList)
+
+        
+        
