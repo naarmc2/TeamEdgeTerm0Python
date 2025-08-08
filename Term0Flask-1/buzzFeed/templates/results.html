@@ -1,0 +1,12 @@
+
+{% extends 'base.html' %}
+
+{% block head %}
+    <h1> BuzzFeed Styled Quiz Results</h1>
+{% endblock %}
+
+
+{% block body %}
+    <p>Your score: {{ score }} out of {{ total_questions }}</p>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+{% endblock %}

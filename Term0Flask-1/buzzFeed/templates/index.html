@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<h1> BuzzFeed Styled Quiz</h1>
+{% endblock %}
+
+
+{% block body %}
+    <h1> Fruit Analyzer </h1>
+    <form method="POST" action="{{ url_for('index') }}"></form>
+        {% for question in QandA.values() %}
+            <fieldset>  
+                <legend>{{question.Question}}</legend>
+                {% for option in question.Options %}
+                    <label>
+                        <input type="radio" id="option" name="{{question.ID}}" value="{{option}}">
+                        {{ option }}
+                    </label><br>
+                {% endfor %}
+            </fieldset>             
+        {% endfor %}
+     <button type="submit">Submit</button>
+    </form>
+
+{% endblock %}

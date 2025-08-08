@@ -1,0 +1,25 @@
+-- database: ../term0data/test.db
+
+SELECT * FROM movies;
+
+SELECT Title
+FROM movies
+WHERE runtime >= 120;
+
+SELECT Title
+FROM movies
+WHERE release_date > 2000;
+
+SELECT AVG(imdb_rating) FROM movies
+WHERE release_date <= 2015 and release_date >= 2005;
+
+-- Director 
+/* Multi line*/
+SELECT director, COUNT(director) AS movie_count
+FROM movies GROUP BY director 
+ORDER BY movie_count DESC
+LIMIT 1;
+
+SELECT genre, AVG(imdb_rating) AS genre_rating
+FROM movies GROUP BY genre 
+ORDER BY genre_rating DESC
